@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Irish+Grover&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: Irish Grover;
+}
+
+body {
+  margin: 0;
+  background-color: #f7f3e3;
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+header {
+  min-height: 10vh;
+}
+
+header,
+.gamePart,
+footer {
+  background-color: #af9164;
+}
+
+/* style du header */
+
+.logo {
+  width: auto;
+  height: 100px;
+  padding: 0.5rem;
+}
+
+/* Burger Menu */
+
+#icons {
+  cursor: pointer;
+  display: none;
+}
+
+/* style nav basic  */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav > ul > li {
+  padding: 0rem 2rem 0rem 0rem;
+  display: inline-block;
+}
+
+a:hover {
+  color: #d65804;
+}
+
+a {
+  font-size: calc(1rem + 0.8vw);
+  color: white;
+  text-decoration: none;
+}
+
+/* Style du main */
+
+main {
+  padding: 1rem 2rem 4rem 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.description > p {
+  padding: 0rem 1rem 2rem 1rem;
+  font-size: 1.5rem;
+  max-width: 60ch;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.gamePart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  margin: auto;
+  border-radius: 30px;
+  text-align: center;
+  max-width: 50%;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 0.7fr;
+  grid-template-rows: 2fr;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-bottom: 1rem;
+  background-color: #d9d9d9;
+  color: black;
+  border: none;
+  border-radius: 15px;
+  font-size: 25px;
+}
+
+.button:hover {
+  color: #d65804;
+}
+
+/* style pour le footer */
+
+footer {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: white;
+  margin-top: auto;
+}
+
+/* Responsive Part */
+
+@media screen and (max-width: 925px) {
+  .gamePart {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .gamePart {
+    max-width: 85%;
+  }
+  .button {
+    width: 100%;
+    font-size: 20px;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* responsive pour le buger  */
+  #icons {
+    display: block;
+    width: 60px;
+    font-size: 30px;
+  }
+  #icons:before {
+    content: "\2630";
+  }
+  .active #icons:before {
+    content: "\2715";
+  }
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 8%;
+    background: #d9d9d9;
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+  }
+  nav li {
+    padding: 3px 0;
+  }
+  nav li a:hover {
+    color: #d65804;
+  }
+  nav.active ul {
+    left: 0;
+    position: absolute;
+  }
+}
