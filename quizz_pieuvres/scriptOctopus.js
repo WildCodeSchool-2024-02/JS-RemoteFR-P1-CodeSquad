@@ -1,8 +1,3 @@
-// Récupérer mes 3 blocks div HTML (le header, la div questions et la div result)
-let header_screen = document.getElementById("header_screen");
-let questions_screen = document.getElementById("questions_screen");
-let result_screen = document.getElementById("result_screen");
-
 // Etablir la fonction Quiz permettant d'ajouter des questions et de voir combien de bonnes réponse le user a
 function Quiz() {
     this.questions = [];
@@ -38,13 +33,13 @@ function Question(title, answers, correctAnswers) {
         this.answers = answers,
         this.correctAnswers = correctAnswers,
 
-        // Mise en place et structuration du HTML et CSS pour mes questions
+        // Mise en place et structuration du HTML et CSS pour les questions
         this.getElement = function (indexQuestion, nbrOfQuestions) {
             let questionTitle = document.createElement("h3");
             questionTitle.classList.add("title_questions");
             questionTitle.textContent = this.title;
 
-            // Le append sert à afficher le html (il existe le after et le prepend si on veut afficher au-dessus ou en-dessous)
+            // Le append sert à afficher le html 
             questions_screen.append(questionTitle);
 
             let questionAnswer = document.createElement("ul");
@@ -163,6 +158,6 @@ function startQuestions() {
 }
 
 
-// Récupérer le bouton dans mon html avec le ElementById car le ElementsByClassName n'a pas le addEventListener)
+// Récupérer le bouton dans mon html avec le ElementById 
 let btn_start = document.getElementById("btn_start");
 btn_start.addEventListener("click", startQuestions);
