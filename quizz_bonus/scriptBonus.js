@@ -41,7 +41,7 @@ function Question(title, answers, correctAnswers) {
             questionTitle.classList.add("title_questions");
             questionTitle.textContent = this.title;
 
-            // Le append sert à afficher le html (il existe le after et le prepend si on veut afficher au-dessus ou en-dessous)
+            // Le append sert à afficher le html 
             questions_screen.append(questionTitle);
 
             let questionAnswer = document.createElement("ul");
@@ -160,6 +160,6 @@ function startQuestions() {
 }
 
 
-// Récupérer le bouton dans mon html avec le ElementById car le ElementsByClassName n'a pas le addEventListener)
+// Récupérer le bouton dans mon html avec le ElementById 
 let btn_start = document.getElementById("btn_start");
 btn_start.addEventListener("click", startQuestions);
