@@ -9,12 +9,14 @@ body {
   margin: 0;
   background-color: #f7f3e3;
 }
+
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
 }
+
 header {
   min-height: 10vh;
 }
@@ -49,7 +51,7 @@ nav {
   width: 100%;
 }
 
-nav > ul > li {
+nav>ul>li {
   padding: 0rem 2rem 0rem 0rem;
   display: inline-block;
 }
@@ -82,7 +84,7 @@ h1 {
   text-align: center;
 }
 
-.description > p {
+.description>p {
   padding: 0rem 1rem 2rem 1rem;
   font-size: 1.5rem;
   max-width: 60ch;
@@ -123,7 +125,7 @@ h2 {
   color: black;
   border: none;
   border-radius: 15px;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 .button:hover {
@@ -155,14 +157,17 @@ footer {
   .gamePart {
     max-width: 85%;
   }
+
   .button {
     width: 100%;
     font-size: 20px;
   }
+
   nav {
     display: flex;
     flex-direction: row;
   }
+
   footer {
     display: flex;
     flex-direction: column;
@@ -174,12 +179,15 @@ footer {
     width: 60px;
     font-size: 30px;
   }
+
   #icons:before {
     content: "\2630";
   }
+
   .active #icons:before {
     content: "\2715";
   }
+
   nav ul {
     position: fixed;
     left: -100%;
@@ -189,14 +197,81 @@ footer {
     text-align: center;
     transition: 0.25s;
   }
+
   nav li {
     padding: 3px 0;
   }
+
   nav li a:hover {
     color: #d65804;
   }
+
   nav.active ul {
     left: 0;
     position: absolute;
   }
 }
+
+/************** Page Contact ***********************/
+
+/*Main*/
+#formulaire_Contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10%;
+}
+
+form {
+  margin: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.input_form {
+  margin: 5%;
+  border: none;
+}
+
+form>input,
+form>textarea {
+  width: 25rem;
+  background-color: silver;
+  color: #d65804;
+  border-radius: 2em;
+  padding: 2%;
+  font-size: 1rem;
+}
+
+form>label {
+  font-size: 1.5rem;
+}
+
+#submit_button {
+  width: 7rem;
+  background-color: #AF9164;
+  color: #F7F3E3;
+}
+
+
+/******Contact Responsive pour telephone*****************/
+
+@media screen and (width <=380px) {
+
+  .input_form {
+    width: 20rem;
+  }
+
+  #submit_button {
+    width: 10rem;
+    font-size: 1.2rem;
+  }
+}
+
+/*************Fin Page contact***************************/
