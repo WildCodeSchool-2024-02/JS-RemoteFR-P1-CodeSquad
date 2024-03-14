@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SquizzGame - Thème les pieuvres" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/SQlogo.png">
+    <title> Squizzgame - Thème Les pieuvres </title>
+    <link rel="stylesheet" href="./quizz.css">
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <img src="../assets/SQlogo.png" alt="squizzz game logo" class="logo" />
+            <ul>
+                <li><a href="../index.html">Acceuil</a></li>
+                <li><a href="#Createurs">Créateurs</a></li>
+                <li><a href="../contact.html">Contacts</a></li>
+            </ul>
+            <div id="icons"></div>
+        </nav>
+    </header>
+
+    <div class="main_content">
+
+        <div id="header_screen" class="header_screen">
+            <h1 class="title"> Les pieuvres </h1>
+
+
+            <p>Le mot <b>« pieuvre »</b> ou <b>« poulpe »</b> vient du grec <b>πολύπους</b> (polypous), qui signifie
+                <b>« plusieurs</b>
+                <b>pieds</b>».
+
+            </p>
+
+            <span class="sous_title"> Il y a <span class="nbrQuestion"> ?? </span> Questions </span>
+            <button id="btn_start" class="start"> Commencer </button>
+        </div>
+    </div>
+
+    <div id="questions_screen" class="questions_screen">
+    </div>
+
+    <div id="result_screen" class="result_screen">
+        <h2 class=""> Résultat !</h2>
+        <span class=""> Vous avez <span id="nbrCorrects"> ?? </span> réponses correctes sur <span class="nbrQuestion">
+                ?? </span> </span>
+    </div>
+
+
+    <footer>
+        <a target="blank" href="https://github.com/WildCodeSchool-2024-02/JS-RemoteFR-P1-CodeSquad"><img
+                src="../assets/github.png" alt="logo github" /></a>
+        <p>© Copyright - CodeSquad - 2024</p>
+    </footer>
+
+    <script src="./scriptOctopus.js"></script>
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
