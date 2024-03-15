@@ -275,3 +275,70 @@ form>label {
 }
 
 /*************Fin Page contact***************************/
+/* Style page createur */
+
+h3 {
+  color: white;
+  font-size: 3rem ;
+}
+article>p{
+  font-size: 2rem ;
+}
+
+.createur {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.7rem;
+  width: 70%  ;
+  color: white;
+  
+}
+
+.lauryn,
+.antho,
+.hamid,
+.nico {
+  background-color: #af9164;
+  border-radius: 2rem ;
+  text-align: center;
+  padding: 3rem 1rem 1rem 1rem ;
+  height: 50rem ;
+  width: 20rem ;
+  align-items: center ;
+  
+}
+
+/* Taille des img */
+
+.lauryn-img {
+  width: 52%;
+  background-color: #d9d9d9;
+  border-radius: 50% ;
+}
+
+.antho-img {
+  width: 52% ;
+  background-color: #d9d9d9;
+  border-radius: 50% ;
+}
+
+.hamid-img {
+  width: 50%;
+  background-color: #d9d9d9;
+  border-radius: 50% ;
+  padding: 0.5rem;
+}
+.nico-img {
+  width: 52% ;
+  background-color: #d9d9d9;
+  border-radius: 50% ;
+}
+/* partie responsive créateur */
+@media screen and (max-width: 768px) {
+  .createur {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+ }
