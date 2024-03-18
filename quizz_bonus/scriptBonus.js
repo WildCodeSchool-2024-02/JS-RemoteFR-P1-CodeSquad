@@ -2,9 +2,12 @@
 
 // Etablir la fonction Quiz permettant d'ajouter des questions et de voir combien de bonnes réponse le user a
 function Quiz() {
-    this.questions = [];
-    this.nbrCorrects = 0;
-    this.indexCurrentQuestion = 0;
+    // initialise les variables
+    this.questions = []; //tableau de question (vide)
+
+    this.nbrCorrects = 0; // nombre de réponse correct = 0
+
+    this.indexCurrentQuestion = 0; // Index de la question = 0
 
     // Ajouts de questions
     this.addQuestion = function (question) {
@@ -19,15 +22,26 @@ function Quiz() {
             );
         }
         else {
-            questions_screen.style.display = "none";
-
             let NbrCorrectUser = document.querySelector("#nbrCorrects");
-            NbrCorrectUser.textContent = quiz.nbrCorrects;
+            let trophyImg = document.querySelector("#trophyImg");
+            let trophyText = document.querySelector("#trophyText");
+
+            questions_screen.style.display = "none";
             result_screen.style.display = "block";
+            NbrCorrectUser.textContent = quiz.nbrCorrects;
+
+            if (quiz.nbrCorrects >= 6) {  // si réponses >= 6, ajout d'image trophy + texte congrats
+                trophyImg.src = "../assets/trophy.png"
+                trophyText.textContent = "Bravo vous êtes incollable!"
+            }
+            else {
+                trophyImg.src = "../assets/looser.png" // sinon ajout image looser + texte
+                trophyText.textContent = "Allez révisez!"
+            }
         }
+
     }
 }
-
 
 // Fonction Question permettant de créer les questions avec le titre, les réponses et la réponse correcte
 function Question(title, answers, correctAnswers) {
@@ -139,7 +153,7 @@ quiz.addQuestion(question8);
 let question9 = new Question("Qui est Célia Mae dans Monstre & Cie ? ", ["La chef des monstres", "La petite fille", "La copine de Bob Razowski"], [3]);
 quiz.addQuestion(question9);
 
-let question10 = new Question("Dans quel film, des pieuvres mécaniques patrouillent dans les égoûts et cavernes sous la surface de la planète ? ", ["Alien", "Matrix", "Terminator"], [2]);
+let question10 = new Question("Dans quel film, des pieuvres mécaniques patrouillent sous la surface de la planète ? ", ["Alien", "Matrix", "Terminator"], [2]);
 quiz.addQuestion(question10);
 
 
@@ -160,6 +174,6 @@ function startQuestions() {
 }
 
 
-// Récupérer le bouton dans mon html avec le ElementById 
+
 let btn_start = document.getElementById("btn_start");
 btn_start.addEventListener("click", startQuestions);
