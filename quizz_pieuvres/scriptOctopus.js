@@ -1,7 +1,3 @@
-// Récupérer mes 3 blocks div HTML (le header, la div questions et la div result)
-let header_screen = document.getElementById("header_screen");
-let questions_screen = document.getElementById("questions_screen");
-let result_screen = document.getElementById("result_screen");
 
 // Etablir la fonction Quiz permettant d'ajouter des questions et de voir combien de bonnes réponse le user a
 function Quiz() {
@@ -24,9 +20,24 @@ function Quiz() {
         else {
             questions_screen.style.display = "none";
 
+            let trophyImg = document.querySelector("#trophyImg");
+            let trophyText = document.querySelector("#trophyText");
             let NbrCorrectUser = document.querySelector("#nbrCorrects");
+
             NbrCorrectUser.textContent = quiz.nbrCorrects;
+            if (quiz.nbrCorrects >= 6) {
+                trophyImg.src = "../assets/trophy.png" // image trophy
+                trophyText.textContent = "Bravo vous êtes un vrai molusque!"
+            }
+            else {
+                trophyImg.src = "../assets/looser.png" // image du looser
+                trophyText.textContent = "Vous êtes une huître!"
+
+            }
+
             result_screen.style.display = "block";
+
+
         }
     }
 }
@@ -38,13 +49,13 @@ function Question(title, answers, correctAnswers) {
         this.answers = answers,
         this.correctAnswers = correctAnswers,
 
-        // Mise en place et structuration du HTML et CSS pour mes questions
+        // Mise en place et structuration du HTML et CSS pour les questions
         this.getElement = function (indexQuestion, nbrOfQuestions) {
             let questionTitle = document.createElement("h3");
             questionTitle.classList.add("title_questions");
             questionTitle.textContent = this.title;
 
-            // Le append sert à afficher le html (il existe le after et le prepend si on veut afficher au-dessus ou en-dessous)
+            // Le append sert à afficher le html 
             questions_screen.append(questionTitle);
 
             let questionAnswer = document.createElement("ul");
@@ -92,6 +103,8 @@ function Question(title, answers, correctAnswers) {
             // Vérifiez si toutes les bonnes réponses ont été sélectionnées
             const allCorrectAnswersSelected = this.correctAnswers.every(index => {
                 return document.getElementById(index).classList.contains("answersCorrect");
+
+
             });
 
             // Si toutes les bonnes réponses ont été sélectionnées, passez à la question suivante
@@ -108,6 +121,8 @@ function Question(title, answers, correctAnswers) {
     this.isCorrectAnswer = function (answerUser) {
         return this.correctAnswers.includes(parseInt(answerUser)); // Vérifie si la réponse est dans les réponses correctes
     }
+
+
 };
 
 
@@ -127,7 +142,7 @@ quiz.addQuestion(question3);
 let question4 = new Question("Combien de coeur(s) possède(nt) les pieuvres ? ", ["1", "2", "3"], [3]);
 quiz.addQuestion(question4);
 
-let question5 = new Question("Les pieuvres peuvent se reconnaître entre elles, mais comment font-elles ? ", ["Part la vue", "Par les ondes", "Par des High-Five"], [3]);
+let question5 = new Question("Les pieuvres peuvent se reconnaître entre elles, mais comment font-elles ? ", ["Par la vue", "Par les ondes", "Par des High-Five"], [3]);
 quiz.addQuestion(question5);
 
 let question6 = new Question("De quelle couleur est le sang de la pieuvre ? ", ["Rouge évidemment", "Bleu", "Noir"], [2]);
@@ -139,7 +154,7 @@ quiz.addQuestion(question7);
 let question8 = new Question("Quelle taille maximale une pieuvre peut-elle atteindre ? ", ["5 mètres ", "10 mètres", "20 mètres"], [2]);
 quiz.addQuestion(question8);
 
-let question9 = new Question("A l'exception de certaines espèces, quel poids maximum une pieuvre peut-elle atteindre ? ", ["5", "20", "10"], [3]);
+let question9 = new Question("A l'exception de certaines espèces, quel poids maximum une pieuvre peut-elle atteindre ? ", ["5kg", "20kg", "10kg"], [3]);
 quiz.addQuestion(question9);
 
 let question10 = new Question("Quelle qualité d'auto-défense, la pieuvre possède t-elle ? ", ["l'homomorphie", "l'homochromie", "elle est juste moche cela suffit déja pour effrayer !"], [2]);
@@ -163,6 +178,6 @@ function startQuestions() {
 }
 
 
-// Récupérer le bouton dans mon html avec le ElementById car le ElementsByClassName n'a pas le addEventListener)
+
 let btn_start = document.getElementById("btn_start");
 btn_start.addEventListener("click", startQuestions);
