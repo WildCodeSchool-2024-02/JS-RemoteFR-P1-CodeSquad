@@ -1,4 +1,3 @@
-
 // Etablir la fonction Quiz permettant d'ajouter des questions et de voir combien de bonnes réponse le user a
 function Quiz() {
     this.questions = [];
@@ -13,9 +12,12 @@ function Quiz() {
     // Fonction servant à passer à la question suivante s'il y en a une, sinon ça affiche le résultat final 
     this.displayCurrentQuestion = function () {
         if (this.indexCurrentQuestion < this.questions.length) {
+            timer.startTimer(5); // on démarre le timer avec le temps souhaité
+
             this.questions[this.indexCurrentQuestion].getElement(
                 this.indexCurrentQuestion + 1, this.questions.length
             );
+
         }
         else {
             questions_screen.style.display = "none";
@@ -31,7 +33,7 @@ function Quiz() {
             }
             else {
                 trophyImg.src = "../assets/looser.png" // image du looser
-                trophyText.textContent = "Vous êtes une huître!"
+                trophyText.textContent = "Vous êtes une crevette!"
 
             }
 
@@ -88,6 +90,7 @@ function Question(title, answers, correctAnswers) {
 
         // Ici on va checker la réponse correcte avec une écoute d'évènement :
         this.checkAnswer = (e) => {
+            timer.stopTimer();
             let answerSelect = e.target;
             if (this.isCorrectAnswer(answerSelect.id)) {
                 answerSelect.classList.add("answersCorrect");
@@ -112,7 +115,7 @@ function Question(title, answers, correctAnswers) {
                 setTimeout(function () {
                     questions_screen.textContent = '';
                     quiz.indexCurrentQuestion++;
-                    quiz.displayCurrentQuestion();
+                    quiz.displayCurrentQuestion(1);
                 }, 1100);
             }
         }
@@ -128,7 +131,10 @@ function Question(title, answers, correctAnswers) {
 
 // On va récupérer notre fonction Quiz pour implémenter ses données dans ses arguments 
 // Partie Création des mes données de Questions :
-let quiz = new Quiz();
+let timer = new Timer(); // on creer une INSTANCE de la classe Timer
+// let timer2 = new Timer(); // on creer une deuxième INSTANCE indépendante de la classe Timer
+let quiz = new Quiz(); // on creer une INSTANCE de la classe QUIZ
+
 
 let question1 = new Question("Combien de bras possède la pieuvre ?", ["6", "8", "12"], [2]);
 quiz.addQuestion(question1);
@@ -181,3 +187,27 @@ function startQuestions() {
 
 let btn_start = document.getElementById("btn_start");
 btn_start.addEventListener("click", startQuestions);
+
+
+
+
+
+
+function Timer() {
+    let timer; // on instancie le timer pour pouvoir s'en servir dans les METHODES (une methode est une fonction lié a une classe)
+    this.startTimer = (secondes) => {
+        count = secondes
+        timer = setInterval(function () { // on
+            document.getElementById("timer_setInterval").innerHTML = count + " secondes"
+            if (count == 0) {
+                clearInterval(timer);
+                document.getElementById("timer_setInterval").innerHTML = "Vous êtes trop lent!";
+            }
+            count--;
+        }, 1000);
+    }
+    this.stopTimer = () => {
+        clearInterval(timer);
+    }
+}
+
