@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Squizzz Game</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/SQlogo.png">
-  </head>
-  <body>
-    <div class="page-container">
-      <header>
-        <nav id="nav">
-          <img src="assets/SQlogo.png" alt="squizzz game logo" class="logo" />
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="createur.html">Créateurs</a></li>
-            <li><a href="contact.html">Contacts</a></li>
-          </ul>
-          <div id="icons"></div>
-        </nav>
-      </header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Squizzz Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/SQlogo.png">
+</head>
+
+<body>
+  <div class="page-container">
+    <header>
+      <nav id="nav">
+        <img src="assets/SQlogo.png" alt="squizzz game logo" class="logo" />
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="createur.html">Créateurs</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+        <div id="icons"></div>
+      </nav>
+    </header>
     <main>
       <section class="description">
         <h1>
@@ -27,40 +29,50 @@
         </h1>
         <section class="createur">
           <article class="lauryn">
+            <div id="d1">
             <img src="assets/lauryn.png" alt="avatar de lauryn" class="lauryn-img" />
             <h3>Lauryn</h3>
-            <p>Que dit une pieuvre effrayée ?
+            <p id="p1" class="hide">Que dit une pieuvre effrayée ?
               j ai la chair de poulpe</p>
+            </div>
           </article>
           <article class="antho">
+            <div id="d2">
             <img src="assets/antho.png" alt="avatar de antho" class="antho-img" />
             <h3>Anthony</h3>
-            <p>Quel est le comble pour une pieuvre ?
+            <p id="p2" class="hide">Quel est le comble pour une pieuvre ?
               C'est de se faire un sans d'encre !
+
               </p>
+              </div>
+
           </article>
           <article class="hamid">
+            <div id="d3">
             <img src="assets/hamid.png" alt="avatar de hamid" class="hamid-img" />
             <h3>Hamid</h3>
-            <p>Parfois je révérais d'être une pieuvre ( ou un poulpe ç'est pareil ) pour pouvoir gifler 8 personnes a la fois. </p>
+
+            <p id="p3" class="hide">Parfois je révérais d'être une pieuvre ( ou un poulpe ç'est pareil ) pour pouvoir gifler 8 personnes a la fois. </p>
+            </div>
           </article>
           <article class="nico">
+            <div id="d4">
             <img src="assets/mimonico.png" alt="avatar de nico" class="nico-img" />
             <h3>Nicolas</h3>
-            <p>Quel est le sport préféré des pieuvres ? Le "squidditch" bien sûr, mais attention aux coups de tentacules !</p>
+            <p id="p4" class="hide">Quel est le sport préféré des pieuvres ? Le "squidditch" bien sûr, mais attention aux coups de tentacules !</p>
+            </div>
           </article>
         </section>
-        </section>
+      </section>
     </main>
     <footer>
-      <a
-        target="blank"
-        href="https://github.com/WildCodeSchool-2024-02/JS-RemoteFR-P1-CodeSquad"
-        ><img src="assets/github.png" alt="logo github"
-      /></a>
+      <a target="blank" href="https://github.com/WildCodeSchool-2024-02/JS-RemoteFR-P1-CodeSquad"><img
+          src="assets/github.png" alt="logo github" /></a>
       <p>© Copyright - CodeSquad - 2024</p>
     </footer>
   </div>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
+  <script src="createur.js"></script>
   </body>
+
 </html>
