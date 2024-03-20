@@ -22,6 +22,8 @@ function Quiz() {
         }
         else {
             questions_screen.style.display = "none";
+            document.getElementById("timer_setInterval").style.display = "none";
+
 
             let trophyImg = document.querySelector("#trophyImg");
             let trophyText = document.querySelector("#trophyText");
