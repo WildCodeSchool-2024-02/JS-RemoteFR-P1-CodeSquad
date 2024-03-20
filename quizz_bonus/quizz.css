@@ -79,6 +79,10 @@ h1 {
     font-size: 4rem;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .description {
     display: flex;
     flex-direction: column;
@@ -96,8 +100,16 @@ h1 {
 h2 {
     color: black;
     text-align: center;
-    padding-bottom: 2rem;
-    font-size: 2rem;
+    padding-bottom: 1rem;
+    font-size: 4rem;
+}
+
+#timer_setInterval {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    font-size: 20px;
+    padding-top: 10px;
 }
 
 .trophy {
@@ -148,7 +160,7 @@ footer {
     width: 100%;
     bottom: 0;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     padding: 1.5rem;
     color: white;
@@ -156,7 +168,8 @@ footer {
 }
 
 footer>p {
-    font-size: 15px;
+    font-size: 1.5rem;
+    align-items: center;
 }
 
 /* style pour le quizz */
@@ -437,13 +450,25 @@ p {
         flex-direction: row;
     }
 
+    #trophyImg {
+        height: 150px;
+        width: auto;
+    }
+
     footer {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     footer>p {
         padding-top: 0;
+    }
+
+    #trophyImg {
+        height: 150px;
+        width: auto;
     }
 
     /* responsive pour le burger  */
