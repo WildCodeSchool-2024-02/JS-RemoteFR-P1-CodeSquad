@@ -32,7 +32,7 @@ function Quiz() {
             NbrCorrectUser.textContent = quiz.nbrCorrects;
             if (quiz.nbrCorrects >= 6) {
                 trophyImg.src = "../assets/trophy.png" // image trophy
-                trophyText.textContent = "Bravo vous êtes un vrai molusque!"
+                trophyText.textContent = "Bravo vous êtes un vrai mollusque!"
             }
             else {
                 trophyImg.src = "../assets/looser.png" // image du looser
