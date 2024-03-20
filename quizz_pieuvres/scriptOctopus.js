@@ -198,7 +198,7 @@ function Timer() {
     let timer; // on instancie le timer pour pouvoir s'en servir dans les METHODES (une methode est une fonction lié a une classe)
     this.startTimer = (secondes) => {
         count = secondes
-        timer = setInterval(function () { // on
+        timer = setInterval(function () {
             document.getElementById("timer_setInterval").innerHTML = count + " secondes"
             if (count == 0) {
                 clearInterval(timer);

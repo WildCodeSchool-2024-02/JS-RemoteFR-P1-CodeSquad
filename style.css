@@ -220,7 +220,10 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 10%;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+
 }
 
 form {
@@ -259,6 +262,9 @@ form>label {
   color: #F7F3E3;
 }
 
+#formulaire_Contact>h1 {
+  margin-top: 0;
+}
 
 /******Contact Responsive pour telephone*****************/
 
@@ -279,10 +285,11 @@ form>label {
 
 h3 {
   color: white;
-  font-size: 3rem ;
+  font-size: 3rem;
 }
-article>p{
-  font-size: 2rem ;
+
+article>p {
+  font-size: 2rem;
 }
 
 .createur {
@@ -290,9 +297,9 @@ article>p{
   justify-content: space-around;
   align-items: center;
   gap: 0.7rem;
-  width: 70%  ;
+  width: 70%;
   color: white;
-  
+
 }
 
 .lauryn,
@@ -300,13 +307,13 @@ article>p{
 .hamid,
 .nico {
   background-color: #af9164;
-  border-radius: 2rem ;
+  border-radius: 2rem;
   text-align: center;
-  padding: 3rem 1rem 1rem 1rem ;
-  height: 50rem ;
-  width: 20rem ;
-  align-items: center ;
-  
+  padding: 3rem 1rem 1rem 1rem;
+  height: 50rem;
+  width: 20rem;
+  align-items: center;
+
 }
 
 /* Taille des img */
@@ -314,31 +321,33 @@ article>p{
 .lauryn-img {
   width: 52%;
   background-color: #d9d9d9;
-  border-radius: 50% ;
+  border-radius: 50%;
 }
 
 .antho-img {
-  width: 52% ;
+  width: 52%;
   background-color: #d9d9d9;
-  border-radius: 50% ;
+  border-radius: 50%;
 }
 
 .hamid-img {
   width: 50%;
   background-color: #d9d9d9;
-  border-radius: 50% ;
+  border-radius: 50%;
   padding: 0.5rem;
 }
+
 .nico-img {
-  width: 52% ;
+  width: 52%;
   background-color: #d9d9d9;
-  border-radius: 50% ;
+  border-radius: 50%;
 }
+
 /* partie responsive créateur */
 @media screen and (max-width: 768px) {
   .createur {
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     align-items: center;
+  }
 }
- }
