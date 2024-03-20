@@ -1,8 +1,9 @@
+let indexCurrentQuestion = 0;   // Fonction question actuelle va servir dans le quiz + le timer
+
 // Etablir la fonction Quiz permettant d'ajouter des questions et de voir combien de bonnes réponse le user a
 function Quiz() {
     this.questions = [];
     this.nbrCorrects = 0;
-    this.indexCurrentQuestion = 0;
 
     // Ajouts de questions
     this.addQuestion = function (question) {
@@ -11,11 +12,11 @@ function Quiz() {
 
     // Fonction servant à passer à la question suivante s'il y en a une, sinon ça affiche le résultat final 
     this.displayCurrentQuestion = function () {
-        if (this.indexCurrentQuestion < this.questions.length) {
-            timer.startTimer(5); // on démarre le timer avec le temps souhaité
+        if (indexCurrentQuestion < this.questions.length) {
+            timer.startTimer(10); // on démarre le timer avec le temps souhaité
 
-            this.questions[this.indexCurrentQuestion].getElement(
-                this.indexCurrentQuestion + 1, this.questions.length
+            this.questions[indexCurrentQuestion].getElement(
+                indexCurrentQuestion + 1, this.questions.length
             );
 
         }
@@ -114,7 +115,7 @@ function Question(title, answers, correctAnswers) {
             if (allCorrectAnswersSelected) {
                 setTimeout(function () {
                     questions_screen.textContent = '';
-                    quiz.indexCurrentQuestion++;
+                    indexCurrentQuestion++;
                     quiz.displayCurrentQuestion(1);
                 }, 1100);
             }
@@ -202,6 +203,10 @@ function Timer() {
             if (count == 0) {
                 clearInterval(timer);
                 document.getElementById("timer_setInterval").innerHTML = "Vous êtes trop lent!";
+
+                questions_screen.textContent = '';
+                indexCurrentQuestion++;
+                quiz.displayCurrentQuestion();
             }
             count--;
         }, 1000);

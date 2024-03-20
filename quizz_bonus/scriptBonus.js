@@ -1,13 +1,9 @@
-
+let indexCurrentQuestion = 0;   // Fonction question actuelle va servir dans le quiz + le timer
 
 // Etablir la fonction Quiz permettant d'ajouter des questions et de voir combien de bonnes réponse le user a
-function Quiz() {
-    // initialise les variables
+function Quiz() {  // initialise les variables
     this.questions = []; //tableau de question (vide)
-
     this.nbrCorrects = 0; // nombre de réponse correct = 0
-
-    this.indexCurrentQuestion = 0; // Index de la question = 0
 
     // Ajouts de questions
     this.addQuestion = function (question) {
@@ -16,20 +12,22 @@ function Quiz() {
 
     // Fonction servant à passer à la question suivante s'il y en a une, sinon ça affiche le résultat final 
     this.displayCurrentQuestion = function () {
-        if (this.indexCurrentQuestion < this.questions.length) {
-            this.questions[this.indexCurrentQuestion].getElement(
-                this.indexCurrentQuestion + 1, this.questions.length
+        if (indexCurrentQuestion < this.questions.length) {
+            timer.startTimer(10); // on démarre le timer avec le temps souhaité
+
+            this.questions[indexCurrentQuestion].getElement(
+                indexCurrentQuestion + 1, this.questions.length
             );
         }
         else {
-            let NbrCorrectUser = document.querySelector("#nbrCorrects");
+            questions_screen.style.display = "none";
+
             let trophyImg = document.querySelector("#trophyImg");
             let trophyText = document.querySelector("#trophyText");
+            let NbrCorrectUser = document.querySelector("#nbrCorrects");
 
-            questions_screen.style.display = "none";
-            result_screen.style.display = "block";
+
             NbrCorrectUser.textContent = quiz.nbrCorrects;
-
             if (quiz.nbrCorrects >= 6) {  // si réponses >= 6, ajout d'image trophy + texte congrats
                 trophyImg.src = "../assets/trophy.png"
                 trophyText.textContent = "Bravo vous êtes incollable!"
@@ -38,6 +36,7 @@ function Quiz() {
                 trophyImg.src = "../assets/looser.png" // sinon ajout image looser + texte
                 trophyText.textContent = "Allez révisez!"
             }
+            result_screen.style.display = "block";
         }
 
     }
@@ -88,6 +87,7 @@ function Question(title, answers, correctAnswers) {
 
         // Ici on va checker la réponse correcte avec une écoute d'évènement :
         this.checkAnswer = (e) => {
+            timer.stopTimer();
             let answerSelect = e.target;
             if (this.isCorrectAnswer(answerSelect.id)) {
                 answerSelect.classList.add("answersCorrect");
@@ -109,8 +109,8 @@ function Question(title, answers, correctAnswers) {
             if (allCorrectAnswersSelected) {
                 setTimeout(function () {
                     questions_screen.textContent = '';
-                    quiz.indexCurrentQuestion++;
-                    quiz.displayCurrentQuestion();
+                    indexCurrentQuestion++;
+                    quiz.displayCurrentQuestion(1);
                 }, 1100);
             }
         }
@@ -124,6 +124,7 @@ function Question(title, answers, correctAnswers) {
 
 // On va récupérer notre fonction Quiz pour implémenter ses données dans ses arguments 
 // Partie Création de Questions :
+let timer = new Timer();
 let quiz = new Quiz();
 
 let question1 = new Question("Dans quelle animé, peut-on rencontrer la pieuvre Hank ? ", ["La Petite Sirène", "Atlantide", "Le Monde de Dory"], [3]);
@@ -177,3 +178,27 @@ function startQuestions() {
 
 let btn_start = document.getElementById("btn_start");
 btn_start.addEventListener("click", startQuestions);
+
+
+
+function Timer() {
+    let timer; // on instancie le timer pour pouvoir s'en servir dans les METHODES (une methode est une fonction lié a une classe)
+    this.startTimer = (secondes) => {
+        count = secondes
+        timer = setInterval(function () { // on
+            document.getElementById("timer_setInterval").innerHTML = count + " secondes"
+            if (count == 0) {
+                clearInterval(timer);
+                document.getElementById("timer_setInterval").innerHTML = "Vous êtes trop lent!";
+
+                questions_screen.textContent = '';
+                indexCurrentQuestion++;
+                quiz.displayCurrentQuestion();
+            }
+            count--;
+        }, 1000);
+    }
+    this.stopTimer = () => {
+        clearInterval(timer);
+    }
+}

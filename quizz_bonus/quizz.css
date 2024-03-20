@@ -79,6 +79,10 @@ h1 {
     font-size: 4rem;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .description {
     display: flex;
     flex-direction: column;
@@ -98,6 +102,14 @@ h2 {
     text-align: center;
     padding-bottom: 1rem;
     font-size: 4rem;
+}
+
+#timer_setInterval {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    font-size: 20px;
+    padding-top: 10px;
 }
 
 .trophy {
@@ -157,6 +169,7 @@ footer {
 
 footer>p {
     font-size: 1.5rem;
+    align-items: center;
 }
 
 /* style pour le quizz */
@@ -451,6 +464,11 @@ p {
 
     footer>p {
         padding-top: 0;
+    }
+
+    #trophyImg {
+        height: 150px;
+        width: auto;
     }
 
     /* responsive pour le burger  */
