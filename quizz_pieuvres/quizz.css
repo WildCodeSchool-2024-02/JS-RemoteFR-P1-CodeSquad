@@ -1,531 +1,563 @@
 body {
-    font-family: "Irish Grover";
-    background-color: #F7F3E3
+  font-family: "Irish Grover";
+  background-color: #f7f3e3;
 }
 
 * {
-    box-sizing: border-box;
-    font-family: Irish Grover;
+  box-sizing: border-box;
+  font-family: Irish Grover;
 }
 
 body {
-    margin: 0;
-    background-color: #f7f3e3;
+  margin: 0;
+  background-color: #f7f3e3;
 }
 
 .page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 header {
-    min-height: 10vh;
+  min-height: 10vh;
 }
 
 header,
 .gamePart,
 footer {
-    background-color: #af9164;
+  background-color: #af9164;
 }
 
 /* style du header */
 
 .logo {
-    width: auto;
-    height: 100px;
-    padding: 0.5rem;
+  width: auto;
+  height: 100px;
+  padding: 0.5rem;
 }
 
 /* Burger Menu */
 
 #icons {
-    cursor: pointer;
-    display: none;
+  cursor: pointer;
+  display: none;
 }
 
 /* style nav basic  */
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-nav>ul>li {
-    padding: 0rem 2rem 0rem 0rem;
-    display: inline-block;
+nav > ul > li {
+  padding: 0rem 2rem 0rem 0rem;
+  display: inline-block;
 }
 
 a:hover {
-    color: #d65804;
+  color: #d65804;
 }
 
 a {
-    font-size: calc(1rem + 0.8vw);
-    color: white;
-    text-decoration: none;
+  font-size: calc(1rem + 0.8vw);
+  color: white;
+  text-decoration: none;
 }
 
 /* Style du main */
 
 main {
-    padding: 1rem 2rem 4rem 2rem;
+  padding: 1rem 2rem 4rem 2rem;
 }
 
 h1 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.description>p {
-    padding: 0rem 1rem 2rem 1rem;
-    font-size: 1.5rem;
-    max-width: 60ch;
+.description > p {
+  padding: 0rem 1rem 2rem 1rem;
+  font-size: 1.5rem;
+  max-width: 60ch;
 }
 
 h2 {
-    color: black;
-    text-align: center;
-    padding-bottom: 1rem;
-    font-size: 4rem;
+  color: black;
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 4rem;
 }
 
 #timer_setInterval {
-    display: flex;
-    justify-content: center;
-    align-content: flex-end;
-    font-size: 20px;
-    padding-top: 10px;
-    color: #d65804;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  font-size: 20px;
+  padding-top: 10px;
+  color: #d65804;
 }
 
 .trophy {
-    justify-content: center;
+  justify-content: center;
 }
 
-
 .gamePart {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
-    margin: auto;
-    border-radius: 30px;
-    text-align: center;
-    max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  margin: auto;
+  border-radius: 30px;
+  text-align: center;
+  max-width: 50%;
 }
 
 .button-container {
-    display: grid;
-    grid-template-columns: 0.7fr;
-    grid-template-rows: 2fr;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: 0.7fr;
+  grid-template-rows: 2fr;
+  justify-content: center;
 }
 
 .button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem 2rem 1rem 2rem;
-    margin-bottom: 1rem;
-    background-color: #d9d9d9;
-    color: black;
-    border: none;
-    border-radius: 15px;
-    font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-bottom: 1rem;
+  background-color: #d9d9d9;
+  color: black;
+  border: none;
+  border-radius: 15px;
+  font-size: 25px;
 }
 
 .button:hover {
-    color: #d65804;
+  color: #d65804;
 }
 
 /* style pour le footer */
 
 footer {
-    min-height: 10vh;
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 1.5rem;
-    color: white;
-    margin-top: auto;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem;
+  color: white;
+  margin-top: auto;
 }
 
-footer>p {
-    font-size: 1.5rem;
-    align-items: center;
+footer > p {
+  font-size: 15px;
+  align-items: center;
 }
 
 /* style pour le quizz */
 
 .return_menu {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .main_content {
-    text-align: center;
-    animation-name: slide;
-    animation-duration: 1000ms;
+  text-align: center;
+  animation-name: slide;
+  animation-duration: 1000ms;
 }
 
 .title {
-    font-size: 33px;
-    margin-top: 5%;
+  font-size: 33px;
+  margin-top: 5%;
 }
 
 p {
-    font-size: 25px;
-    padding-top: 20px;
+  font-size: 25px;
+  padding-top: 20px;
 }
 
 .sous_title {
-    display: block;
-    text-decoration: underline;
-    font-size: 26px;
-    padding-top: 10px;
+  display: block;
+  text-decoration: underline;
+  font-size: 26px;
+  padding-top: 10px;
 }
 
 .start {
-    margin-top: 3.5%;
-    padding: 2.5%;
-    font-size: 19px;
-    background-color: #D9D9D9;
-    font-family: "Irish Grover";
-    border-radius: 10px;
-    cursor: pointer;
-    color: black;
-    border: none;
+  margin-top: 3.5%;
+  padding: 2.5%;
+  font-size: 19px;
+  background-color: #d9d9d9;
+  font-family: "Irish Grover";
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+  border: none;
 }
 
 .start:hover {
-    background-color: #b5a58d;
+  background-color: #b5a58d;
 }
 
-
 .header_screen {
-    display: block;
+  display: block;
 }
 
 .questions_screen {
-    display: none;
-    text-align: center;
+  display: none;
+  text-align: center;
 }
 
 .title_questions {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .list_questions {
-    list-style: none;
-    font-size: 24px;
-    margin-right: 12%;
+  list-style: none;
+  font-size: 24px;
+  margin-right: 12%;
 }
 
 .answers {
-    background-color: #AF9164;
-    color: white;
-    text-shadow: 4px 0.5px 3px rgba(0, 0, 0, 1);
-    border-radius: 10px;
-    padding: 1%;
-    margin-bottom: 5%;
-    cursor: pointer;
+  background-color: #af9164;
+  color: white;
+  text-shadow: 4px 0.5px 3px rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  padding: 1%;
+  margin-bottom: 5%;
+  cursor: pointer;
 }
 
 .answers:hover {
-    background-color: #b5a58d;
+  background-color: #b5a58d;
 }
 
 .answersCorrect {
-    background-color: rgb(13, 188, 13);
+  background-color: rgb(13, 188, 13);
 }
 
 .answersCorrect:hover {
-    background-color: rgb(13, 188, 13);
+  background-color: rgb(13, 188, 13);
 }
 
 .answersWrong {
-    background-color: rgb(191, 13, 13);
+  background-color: rgb(191, 13, 13);
 }
 
 .answersWrong:hover {
-    background-color: rgb(191, 13, 13);
+  background-color: rgb(191, 13, 13);
 }
 
 .avancement_question {
-    font-size: 20px;
-    margin-top: 2%;
+  font-size: 20px;
+  margin-top: 2%;
 }
 
 .result_screen {
-    display: block;
-    text-align: center;
-    font-size: 22px;
+  display: block;
+  text-align: center;
+  font-size: 22px;
 }
-
-
-
-
-
-
 
 /* style pour les media queries */
 
-@media (min-width:300px) {
+@media (min-width: 300px) {
+  .title_questions {
+    font-size: 26px;
+  }
 
-    .title_questions {
-        font-size: 26px;
-    }
+  .list_questions {
+    list-style: none;
+    font-size: 26px;
+    margin-right: 12%;
+  }
 
-    .list_questions {
-        list-style: none;
-        font-size: 26px;
-        margin-right: 12%;
-    }
+  .list_questions {
+    list-style: none;
+    font-size: 24px;
+    margin-right: 17%;
+    margin-left: 12%;
+  }
 
+  .avancement_question {
+    font-size: 23px;
+    margin-top: 2%;
+  }
 
-    .list_questions {
-        list-style: none;
-        font-size: 24px;
-        margin-right: 17%;
-        margin-left: 12%;
-    }
+  .result_screen {
+    display: none;
+    font-size: 25px;
+  }
 
-    .avancement_question {
-        font-size: 23px;
-        margin-top: 2%;
-    }
+  .answers {
+    background-color: #af9164;
+    color: white;
+    text-shadow: 4px 0.5px 3px rgba(0, 0, 0, 1);
+    padding: 1%;
+    margin-bottom: 5%;
+    cursor: pointer;
+  }
 
-    .result_screen {
-        display: none;
-        font-size: 25px;
-    }
+  .answers:hover {
+    background-color: #b5a58d;
+  }
 
-    .answers {
-        background-color: #AF9164;
-        color: white;
-        text-shadow: 4px 0.5px 3px rgba(0, 0, 0, 1);
-        padding: 1%;
-        margin-bottom: 5%;
-        cursor: pointer;
-    }
+  .answersCorrect {
+    background-color: rgb(13, 188, 13);
+  }
 
-    .answers:hover {
-        background-color: #b5a58d;
-    }
+  .answersCorrect:hover {
+    background-color: rgb(13, 188, 13);
+  }
 
-    .answersCorrect {
-        background-color: rgb(13, 188, 13);
-    }
+  .answersWrong {
+    background-color: rgb(191, 13, 13);
+  }
 
-    .answersCorrect:hover {
-        background-color: rgb(13, 188, 13);
-    }
+  .answersWrong:hover {
+    background-color: rgb(191, 13, 13);
+  }
 
-    .answersWrong {
-        background-color: rgb(191, 13, 13);
-    }
-
-    .answersWrong:hover {
-        background-color: rgb(191, 13, 13);
-    }
-
-    .trophy {
-        display: flex;
-        justify-content: center;
-        height: 15rem;
-    }
-
-
-
+  .trophy {
+    display: flex;
+    justify-content: center;
+    height: 15rem;
+  }
 }
 
+@media (min-width: 900px) {
+  .title {
+    font-size: 39px;
+    margin-top: 5%;
+  }
 
-@media (min-width:900px) {
+  .sous_title {
+    font-size: 32px;
+  }
 
-    .title {
-        font-size: 39px;
-        margin-top: 5%;
-    }
+  .start {
+    margin-top: 3%;
+    padding: 0.9%;
+    font-size: 22px;
+    background-color: #d9d9d9;
+    border-radius: 5%;
+    cursor: pointer;
+  }
 
-    .sous_title {
-        font-size: 32px;
-    }
+  .title_questions {
+    font-size: 31px;
+  }
 
-    .start {
-        margin-top: 3%;
-        padding: 0.9%;
-        font-size: 22px;
-        background-color: #D9D9D9;
-        border-radius: 5%;
-        cursor: pointer;
-    }
+  .list_questions {
+    list-style: none;
+    font-size: 28px;
+    margin-left: 20%;
+    margin-right: 25%;
+  }
 
-    .title_questions {
-        font-size: 31px;
-    }
+  .answers {
+    background-color: #af9164;
+    color: white;
+    text-shadow: 4px 0.5px 3px rgba(0, 0, 0, 1);
+    padding: 1%;
+    margin-bottom: 5%;
+    cursor: pointer;
+  }
 
-    .list_questions {
-        list-style: none;
-        font-size: 28px;
-        margin-left: 20%;
-        margin-right: 25%;
-    }
+  .answers:hover {
+    background-color: #b5a58d;
+  }
 
-    .answers {
-        background-color: #AF9164;
-        color: white;
-        text-shadow: 4px 0.5px 3px rgba(0, 0, 0, 1);
-        padding: 1%;
-        margin-bottom: 5%;
-        cursor: pointer;
-    }
+  .answersCorrect {
+    background-color: rgb(13, 188, 13);
+  }
 
-    .answers:hover {
-        background-color: #b5a58d;
-    }
+  .answersCorrect:hover {
+    background-color: rgb(13, 188, 13);
+  }
 
-    .answersCorrect {
-        background-color: rgb(13, 188, 13);
-    }
+  .answersWrong {
+    background-color: rgb(191, 13, 13);
+  }
 
-    .answersCorrect:hover {
-        background-color: rgb(13, 188, 13);
-    }
+  .answersWrong:hover {
+    background-color: rgb(191, 13, 13);
+  }
 
-    .answersWrong {
-        background-color: rgb(191, 13, 13);
-    }
+  .avancement_question {
+    font-size: 26px;
+    margin-top: 2%;
+  }
 
-    .answersWrong:hover {
-        background-color: rgb(191, 13, 13);
-    }
+  .trophy {
+    display: flex;
+    justify-content: center;
+    height: 20rem;
+  }
 
-    .avancement_question {
-        font-size: 26px;
-        margin-top: 2%;
-    }
-
-    .trophy {
-        display: flex;
-        justify-content: center;
-        height: 20rem;
-    }
-
-    .result_screen {
-        display: none;
-        font-size: 28px;
-    }
+  .result_screen {
+    display: none;
+    font-size: 28px;
+  }
 }
-
 
 @media screen and (max-width: 925px) {
-    .gamePart {
-        max-width: 80%;
-    }
+  .gamePart {
+    max-width: 80%;
+  }
 }
 
 @media screen and (max-width: 550px) {
-    .gamePart {
-        max-width: 85%;
-    }
+  .gamePart {
+    max-width: 85%;
+  }
 
-    .header_screen>p {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
+  .header_screen > p {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 
-    .button {
-        width: 100%;
-        font-size: 20px;
-    }
+  .button {
+    width: 100%;
+    font-size: 20px;
+  }
 
-    nav {
-        display: flex;
-        flex-direction: row;
-    }
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
 
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    footer>p {
-        padding-top: 0;
-        text-align: center;
-    }
+  footer > p {
+    padding-top: 0;
+    text-align: center;
+  }
 
-    #trophyImg {
-        height: 150px;
-        width: auto;
-    }
+  #trophyImg {
+    height: 150px;
+    width: auto;
+  }
 
+  /* responsive pour le burger  */
+  #icons {
+    display: block;
+    width: 60px;
+    font-size: 30px;
+  }
 
-    /* responsive pour le burger  */
-    #icons {
-        display: block;
-        width: 60px;
-        font-size: 30px;
-    }
+  #icons:before {
+    content: "\2630";
+  }
 
-    #icons:before {
-        content: "\2630";
-    }
+  .active #icons:before {
+    content: "\2715";
+  }
 
-    .active #icons:before {
-        content: "\2715";
-    }
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 8%;
+    background: #d9d9d9;
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+  }
 
-    nav ul {
-        position: fixed;
-        left: -100%;
-        top: 8%;
-        background: #d9d9d9;
-        width: 100%;
-        text-align: center;
-        transition: 0.25s;
-    }
+  nav li {
+    padding: 3px 0;
+  }
 
-    nav li {
-        padding: 3px 0;
-    }
+  nav li a:hover {
+    color: #d65804;
+  }
 
-    nav li a:hover {
-        color: #d65804;
-    }
-
-    nav.active ul {
-        left: 0;
-        position: absolute;
-    }
-
+  nav.active ul {
+    left: 0;
+    position: absolute;
+  }
 }
 
 @keyframes slide {
-    from {
-        transform: translateX(50%);
-    }
+  from {
+    transform: translateX(50%);
+  }
 
-    to {
-        transform: translateX(0%);
-    }
+  to {
+    transform: translateX(0%);
+  }
+}
+/* NICO-G CSS partie HighScore */
+
+#highScoresQ1ListContainer {
+  display: none;
+}
+#highScoresQ1List {
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+}
+.closeButton {
+  background-color: #af9164;
+  color: #f7f3e3;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+#nameEnter {
+  font-size: 1.5rem;
+}
+form > input,
+form > textarea {
+  border: none;
+  background-color: silver;
+  color: #d65804;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+#submitButton {
+  border: none;
+  border-radius: 5px;
+  background-color: #af9164;
+  color: #f7f3e3;
+  font-size: 1rem;
+}
+
+/* Nico G partie responsive */
+
+@media screen and (max-width: 450px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
 }

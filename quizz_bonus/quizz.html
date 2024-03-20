@@ -1,68 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="SquizzGame - Thème Bonus" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
-    <link rel="icon" href="../assets/SQlogo.png">
-    <title> SquizzGame - Thème Bonus </title>
-    <link rel="stylesheet" href="./quizz.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../assets/SQlogo.png" />
+    <title>SquizzGame - Thème Bonus</title>
+    <link rel="stylesheet" href="./quizz.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav id="nav">
-            <img src="../assets/SQlogo.png" alt="squizzz game logo" class="logo" />
-            <ul>
-                <li><a href="../index.html">Acceuil</a></li>
-                <li><a href="../createurs">Créateurs</a></li>
-                <li><a href="../contact.html">Contacts</a></li>
-            </ul>
-            <div id="icons"></div>
-        </nav>
+      <nav id="nav">
+        <img src="../assets/SQlogo.png" alt="squizzz game logo" class="logo" />
+        <ul>
+          <li><a href="../index.html">Acceuil</a></li>
+          <li><a href="../createur.html">Créateurs</a></li>
+          <li><a href="../contact.html">Contacts</a></li>
+        </ul>
+        <div id="icons"></div>
+      </nav>
     </header>
 
-
     <div class="main_content">
-
-        <div id="header_screen" class="header_screen">
-            <h1 class="title"> Les pieuvres dans les oeuvres de fiction ! </h1>
-            <p>Testez votre culture cinématographique et littéraire.</p>
-            <span class="sous_title"> Il y a <span class="nbrQuestion"> ?? </span> Questions </span>
-            <div>
-                <button id="btn_start" class="start"> Commencer </button>
-            </div>
+      <div id="header_screen" class="header_screen">
+        <h1 class="title">Les pieuvres dans les oeuvres de fiction !</h1>
+        <p>Testez votre culture cinématographique et littéraire.</p>
+        <span class="sous_title">
+          Il y a <span class="nbrQuestion"> ?? </span> Questions
+        </span>
+        <div>
+          <button id="btn_start" class="start">Commencer</button>
         </div>
+      </div>
+      <div id="questions_screen" class="questions_screen"></div>
+      <div id="timer_setInterval"></div>
+      <div id="result_screen" class="result_screen">
+        <h2 class="">Résultat !</h2>
+        <span class="">
+          Vous avez <span id="nbrCorrects"> ?? </span> réponses correctes sur
+          <span class="nbrQuestion"> ?? </span>
+        </span>
+        <!-- NicoG partie pour high score -->
+        <form id="nameForm">
+          <label for="nameInput" id="nameEnter">Entrez votre nom</label>
+          <input
+            type="text"
+            id="nameInput"
+            name="nameInput"
+            placeholder="Nom"
+          />
+          <button type="submit" id="submitButton">Valider</button>
+        </form>
 
-        <div id="timer_setInterval"></div>
-        <div id="questions_screen" class="questions_screen">
-
+        <div id="highScoresQ2ListContainer">
+          <ul id="highScoresQ2List"></ul>
         </div>
-
-        <div id="result_screen" class="result_screen">
-            <h2 class=""> Résultat ! </h2>
-            <span class=""> Vous avez <span id="nbrCorrects"> ?? </span> réponses correctes sur <span
-                    class="nbrQuestion"> ?? </span> </span>
-            <div id="trophy" class="trophy">
-                <img src="./assets/trophyImg" id="trophyImg" alt="trophyImg">
-            </div>
-            <div id="trophyText"></div>
+        <!-- NicoG fin de la partie pour high score -->
+        <div id="trophy" class="trophy">
+          <img src="./assets/trophyImg" id="trophyImg" alt="trophyImg" />
         </div>
-
+        <div id="trophyText"></div>
+      </div>
     </div>
     <footer>
-        <a target="blank" href="https://github.com/WildCodeSchool-2024-02/JS-RemoteFR-P1-CodeSquad"><img
-                src="../assets/github.png" alt="logo github" /></a>
-        <p>© Copyright - CodeSquad - 2024</p>
+      <a
+        target="blank"
+        href="https://github.com/WildCodeSchool-2024-02/JS-RemoteFR-P1-CodeSquad"
+        ><img src="../assets/github.png" alt="logo github"
+      /></a>
+      <p>© Copyright - CodeSquad - 2024</p>
     </footer>
 
     <script src="./scriptBonus.js"></script>
     <script src="../script.js"></script>
-</body>
-
+  </body>
 </html>
